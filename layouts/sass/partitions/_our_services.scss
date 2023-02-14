@@ -1,0 +1,59 @@
+.our-services {
+  padding-bottom: 50px;
+  padding-top: 10px;
+  position: relative;
+  z-index: 2;
+  .our-services-title {
+    @extend %title;
+    margin-bottom: 50px;
+  }
+  .our-services-icon {
+    position: absolute;
+    color: $mainColorGold;
+    font-size: 50px;
+    left: 51%;
+    z-index: -1;
+  }
+  position: relative;
+  .our-services-card {
+    padding: 40px 20px;
+    background-color: #eee;
+    border-radius: 20px;
+    @extend %flex;
+    min-width: fit-content;
+    min-height: fit-content;
+    transform: scale(1);
+    height: 50%;
+    @include transition(0.3s, all);
+    &:hover {
+      background-color: rgba($mainColorGold, 0.2);
+      transform: scale(0.9);
+    }
+    .our-services-image {
+      padding: 30px 0;
+      @extend %flex;
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+  .our-srvices-btn {
+    background-color: #333;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 20px;
+    // margin-bottom: 0px;
+    cursor: pointer;
+    @extend %flex;
+    @include transition(0.3s, all);
+    &:hover {
+      background-color: #000;
+    }
+    .our-services-btn-content {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

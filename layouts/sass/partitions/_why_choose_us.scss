@@ -1,0 +1,153 @@
+.why-choose-us {
+  margin-top: 50px;
+  padding: 50px 0;
+  @extend %flex;
+  background-color: #e0dcdc;
+  flex-direction: column;
+  .why-choose-us-title {
+    @extend %title;
+  }
+  $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  $easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+  .slider--why-choose-us {
+    position: relative;
+    max-width: 750px;
+    .slider--why-choose-us__client {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  #chooseUsList {
+    position: relative;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    li {
+      position: relative;
+      display: inline-block;
+      // float: left;
+      text-align: center;
+      figure {
+        cursor: pointer;
+        margin: 1em;
+        opacity: 0.5;
+        backface-visibility: hidden;
+        transition: transform 450ms $easeInOutSine, opacity 450ms ease-in-out;
+        transform: scale(0.5) translateZ(0px);
+        &:hover {
+          opacity: 0.8;
+          transform: scale(0.6) translateZ(0px);
+        }
+        &:active {
+          opacity: 1;
+          transform: scale(0.7) translateZ(0px);
+        }
+        .our-client-icon-container {
+          border-radius: 5px;
+          // position: relative;
+          position: absolute;
+          // left: 85px;
+          top: -30px;
+          margin: 2rem auto;
+          width: 120px;
+          height: 120px;
+          // overflow: hidden;
+          transform: rotate(25deg) translateZ(0px);
+          z-index: -1;
+          .our-client-icon {
+            font-size: 10em;
+            color: rgba($mainColorGold, 0.3);
+          }
+          // .our-client-image {
+          //   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/teams.jpg)
+          //     no-repeat;
+          //   background-size: cover;
+          //   background-position: 0px 0px;
+          //   position: absolute;
+          //   top: 50%;
+          //   left: 50%;
+          //   width: 170px;
+          //   height: 170px;
+          //   transform: rotate(-45deg) translate(0%, -70%);
+          // }
+        }
+        figcaption {
+          h2 {
+            color: #333;
+            font-size: 1.6rem;
+            font-weight: 800;
+          }
+          p {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+        }
+      }
+      // &:nth-child(1) figure {
+      //   .our-client-image-container {
+      //     .our-client-image {
+      //       background-position: 0px 0px !important;
+      //     }
+      //   }
+      // }
+      // &:nth-child(2) figure {
+      //   .our-client-image-container {
+      //     .our-client-image {
+      //       background-position: 0px 20% !important;
+      //     }
+      //   }
+      // }
+      // &:nth-child(3) figure {
+      //   .our-client-image-container {
+      //     .our-client-image {
+      //       background-position: 0px 40% !important;
+      //     }
+      //   }
+      // }
+      // &:nth-child(4) figure {
+      //   .our-client-image-container {
+      //     .our-client-image {
+      //       background-position: 0px 60% !important;
+      //     }
+      //   }
+      // }
+      // &:nth-child(5) figure {
+      //   .our-client-image-container {
+      //     .our-client-image {
+      //       background-position: 0px 80% !important;
+      //     }
+      //   }
+      // }
+      // &:nth-child(6) figure {
+      //   .our-client-image-container {
+      //     .our-client-image {
+      //       background-position: 0px 100% !important;
+      //     }
+      //   }
+      // }
+    }
+  }
+  .active {
+    opacity: 1 !important;
+    transform: scale(1) translateZ(0px) !important;
+  }
+  .cf {
+    *zoom: 1;
+    &::before,
+    &::after {
+      content: " ";
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
+  }
+}

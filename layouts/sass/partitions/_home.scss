@@ -1,0 +1,165 @@
+$numOfSlides: 5;
+$slidingAT: 1.3s;
+$controlSize: 60px;
+.slider {
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  &__slides {
+    z-index: -1;
+    position: relative;
+    height: 100%;
+  }
+  &__control {
+    z-index: 2;
+    position: absolute;
+    // position: relative;
+    top: 50%;
+    // top: 102%;
+    left: 5%;
+    // left: 50%;
+    width: $controlSize;
+    height: $controlSize;
+    margin-left: calc($controlSize / -2);
+    margin-top: calc($controlSize / -2);
+    border-radius: 50%;
+    background: #fff;
+    // transition: background-color 0.3s;
+    @include transition(0.3s, background-color);
+    cursor: pointer;
+    &--right {
+      left: 95%;
+    }
+    &:hover {
+      background-color: $mainColorGold;
+    }
+    &-line {
+      position: absolute;
+      left: 23px;
+      top: 50%;
+      width: 3px;
+      height: 14px;
+      transform-origin: 50% 0;
+      transform: rotate(-45deg);
+      &:nth-child(2) {
+        transform: translateY(1px) rotate(-135deg);
+      }
+      .slider__control--right & {
+        left: 37px;
+        transform-origin: 1px 0;
+        transform: rotate(45deg);
+        &:nth-child(2) {
+          transform: translateY(1px) rotate(135deg);
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #444;
+        // transition: background-color 0.3s;
+        @include transition(0.3s, background-color);
+      }
+      .slider__control:hover &:after {
+        background-color: #fff;
+      }
+      .slider__control.a--rotation & {
+        &:after {
+          animation: arrowLineRotation 0.49s;
+        }
+        &:nth-child(1):after {
+          animation: arrowLineRotationRev 0.49s;
+        }
+      }
+    }
+  }
+}
+@keyframes arrowLineRotation {
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes arrowLineRotationRev {
+  to {
+    transform: rotate(-180deg);
+  }
+}
+.slide {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150vmax;
+  height: 150vmax;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: clip-path 0s $slidingAT * 0.7;
+  clip-path: circle(calc($controlSize / 2) at 120vw 50%);
+  &.s--prev {
+    clip-path: circle(calc($controlSize / 2) at 30vw 50%);
+  }
+  &.s--active {
+    z-index: 1;
+    transition: clip-path $slidingAT;
+    clip-path: circle(120vmax at 120vw 50%);
+    &.s--active-prev {
+      clip-path: circle(120vmax at 30vw 50%);
+    }
+  }
+  @for $i from 1 through $numOfSlides {
+    &:nth-child(#{$i}) {
+      .slide__inner {
+        // background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-#{$i+1}.jpg");
+        background-image: url("../../layouts/images/carousel/#{$i+1}.png");
+        &.main-slider {
+          @extend %flex;
+          .custom-btn {
+            .btn-get-offer {
+              position: relative;
+              @extend %flex;
+              top: 160px;
+              padding: 10px 30px;
+              width: 200px;
+              height: 50px;
+              text-decoration: none;
+              letter-spacing: 1px;
+              background: $mainColorGold;
+              color: #000;
+              border: 1px solid #444;
+              border-radius: 15px;
+              @include transition(0.2s, all);
+              z-index: 99999;
+              &:hover {
+                background-color: #111;
+                color: $mainColorGold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    margin-left: -50vw;
+    margin-top: -50vh;
+    background-size: cover;
+    background-position: center center;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

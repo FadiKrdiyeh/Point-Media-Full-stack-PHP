@@ -1,0 +1,83 @@
+.contact-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .contact-us-title {
+    @extend %title;
+  }
+  .contact-us-container {
+    margin-top: 50px;
+    .contact-us-items {
+      margin-bottom: 30px;
+      .contact-us-item {
+        border: 1px solid rgba(#eee, 0.7);
+        height: 100%;
+        border-radius: 15px;
+        padding: 20px;
+        width: 100%;
+        @include transition(0.5s, all);
+        &:hover {
+          border: none;
+        }
+        .contact-us-icons {
+          font-size: 50px;
+          color: $mainColorGold;
+          margin: 20px;
+          @extend %text-shadow-g;
+        }
+        .contact-us-inner-title {
+          color: $mainFontColorForBlack;
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+        .contact-us-email {
+          color: rgba($mainFontColorForBlack, 0.7);
+          font-size: 20px;
+        }
+        .contact-us-button {
+          .btn-custom {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 30px;
+            width: 250px;
+            height: 70px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            overflow: hidden;
+            background: #363636;
+            color: $mainFontColorForBlack;
+            @extend %text-shadow-w;
+            border: 1px solid #444;
+            border-radius: 5px;
+            @include transition(0.5s, text-shadow);
+            &::before {
+              content: "";
+              position: absolute;
+              top: var(--y);
+              left: var(--x);
+              transform: translate(-50%, -50%);
+              width: 0;
+              height: 0;
+              border-radius: 50%;
+              transition: width 0.5s, height 0.5s;
+              background: $mainColorGold;
+            }
+            &:hover {
+              color: #111;
+              text-shadow: none;
+              &::before {
+                width: 500px;
+                height: 500px;
+              }
+            }
+            span {
+              position: relative;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

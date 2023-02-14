@@ -1,0 +1,67 @@
+.english {
+  // background-color: black;
+  /***** Start Header *****/
+  header {
+    .navbar {
+      .navbar-brand {
+        .brand-image {
+          left: -10px;
+        }
+      }
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              &::after {
+                left: 0;
+                background: linear-gradient(
+                  to left,
+                  $mainColorGold 0%,
+                  $mainColorBlack 65%
+                );
+              }
+            }
+            &.dropdown {
+              .dropdown-menu {
+                .dropdown-item {
+                  &:hover {
+                    padding-left: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /***** End Header *****/
+
+  /***** Start Why Choose Us *****/
+  .why-choose-us {
+    #chooseUsList {
+      li {
+        float: right;
+        figure {
+          .our-client-icon-container {
+            right: 75px;
+          }
+        }
+      }
+    }
+  }
+  /***** Start Why Choose Us *****/
+
+  /***** Start Footer *****/
+  .footer {
+    .main-footer {
+      .content {
+        .footer-icons {
+          margin-right: 10px;
+          left: 0;
+        }
+      }
+    }
+  }
+  /***** End Footer *****/
+}

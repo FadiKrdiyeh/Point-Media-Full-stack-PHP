@@ -1,0 +1,24 @@
+@import "sass-utils/variable";
+@import "sass-utils/helpers";
+@import "sass-utils/mixins";
+// @import "sass-utils/functions";
+// @import "layouts/loader";
+@import "layouts/global";
+@import "layouts/header";
+
+@import "partitions/home";
+@import "partitions/our_services";
+@import "partitions/about_us";
+@import "partitions/our_works";
+@import "partitions/our_clients";
+@import "partitions/why_choose_us";
+@import "partitions/statistics";
+@import "partitions/blog";
+@import "partitions/our_team";
+@import "partitions/our_hopes";
+@import "partitions/our_services_parts";
+
+@import "layouts/footer";
+@import "layouts/media";
+@import "layouts/langs/ar";
+@import "layouts/langs/en";

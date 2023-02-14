@@ -1,0 +1,17 @@
+@import "sass-utils/variable";
+@import "sass-utils/helpers";
+@import "sass-utils/mixins";
+// @import "sass-utils/functions";
+// @import "layouts/loader";
+@import "layouts/global";
+@import "layouts/header";
+
+@import "pages/login";
+@import "pages/dashboard";
+@import "pages/courses";
+@import "pages/blog";
+@import "pages/works";
+@import "pages/sittings";
+
+@import "layouts/footer";
+@import "layouts/media";

@@ -1,0 +1,169 @@
+%title {
+  color: $mainColorBlack;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  // margin-top: 50px;
+  // margin-bottom: 50px;
+}
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%text-shadow-w {
+  //   text-shadow: 0 0 10px #eee;
+}
+%text-shadow-g {
+  //   text-shadow: 0 0 10px $mainColorGold;
+}
+%text-shadow-b {
+  //   text-shadow: 0 0 10px #111;
+}
+
+/* Custom Hovers */
+/* Wobble To Bottom Left */
+@-webkit-keyframes hvr-wobble-to-bottom-left {
+  16.65% {
+    -webkit-transform: translate(-8px, 8px);
+    transform: translate(-8px, 8px);
+  }
+  33.3% {
+    -webkit-transform: translate(6px, -6px);
+    transform: translate(6px, -6px);
+  }
+  49.95% {
+    -webkit-transform: translate(-4px, 4px);
+    transform: translate(-4px, 4px);
+  }
+  66.6% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, -1px);
+    transform: translate(1px, -1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes hvr-wobble-to-bottom-left {
+  16.65% {
+    -webkit-transform: translate(-8px, 8px);
+    transform: translate(-8px, 8px);
+  }
+  33.3% {
+    -webkit-transform: translate(6px, -6px);
+    transform: translate(6px, -6px);
+  }
+  49.95% {
+    -webkit-transform: translate(-4px, 4px);
+    transform: translate(-4px, 4px);
+  }
+  66.6% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, -1px);
+    transform: translate(1px, -1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+.hvr-wobble-to-bottom-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-to-bottom-left:hover,
+.hvr-wobble-to-bottom-left:focus,
+.hvr-wobble-to-bottom-left:active {
+  -webkit-animation-name: hvr-wobble-to-bottom-left;
+  animation-name: hvr-wobble-to-bottom-left;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* Wobble To Top Left */
+@-webkit-keyframes hvr-wobble-to-top-left {
+  16.65% {
+    -webkit-transform: translate(-8px, -8px);
+    transform: translate(-8px, -8px);
+  }
+  33.3% {
+    -webkit-transform: translate(6px, 6px);
+    transform: translate(6px, 6px);
+  }
+  49.95% {
+    -webkit-transform: translate(-4px, -4px);
+    transform: translate(-4px, -4px);
+  }
+  66.6% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  83.25% {
+    -webkit-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes hvr-wobble-to-top-left {
+  16.65% {
+    -webkit-transform: translate(-8px, -8px);
+    transform: translate(-8px, -8px);
+  }
+  33.3% {
+    -webkit-transform: translate(6px, 6px);
+    transform: translate(6px, 6px);
+  }
+  49.95% {
+    -webkit-transform: translate(-4px, -4px);
+    transform: translate(-4px, -4px);
+  }
+  66.6% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  83.25% {
+    -webkit-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+.hvr-wobble-to-top-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-wobble-to-top-left:hover,
+.hvr-wobble-to-top-left:focus,
+.hvr-wobble-to-top-left:active {
+  -webkit-animation-name: hvr-wobble-to-top-left;
+  animation-name: hvr-wobble-to-top-left;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}

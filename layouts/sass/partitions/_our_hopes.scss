@@ -1,0 +1,37 @@
+.our-hopes {
+  @extend %flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .our-hopes-image-container {
+    position: relative;
+    max-width: 300px;
+    max-height: 500px;
+    img {
+      // position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .our-hopes-text {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+  .our-hopes-btn {
+    width: fit-content;
+    height: 50px;
+    border-radius: 5px;
+    background-color: $mainColorBlack;
+    margin-top: 30px;
+    padding: 5px 20px;
+    @extend %flex;
+    @include transition(0.3s, all);
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $mainColorGold;
+    }
+  }
+}

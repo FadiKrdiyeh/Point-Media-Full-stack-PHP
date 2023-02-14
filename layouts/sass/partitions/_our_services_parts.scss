@@ -1,0 +1,101 @@
+.our-services-parts {
+  .our-services-parts-title-area {
+    background-image: url("../images/about-us/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    z-index: -2;
+    .overlay {
+      position: absolute;
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+      z-index: -1; /* Specify a stack order in case you're using a different order for other elements */
+    }
+    .our-services-parts-main-title {
+      color: #fff;
+      font-weight: bold;
+      font-size: 45px;
+    }
+    .our-services-parts-main-description {
+      color: rgba(#fff, 0.7);
+      // font-weight: bold;
+      font-size: 25px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  .our-services-parts-image {
+    background-image: url("../images/about-us/bg.png");
+    background-size: cover;
+    min-height: 500px;
+    height: auto;
+    width: 100%;
+  }
+  .our-services-parts-list {
+    list-style: none;
+    padding: 0 50px;
+    margin: 40px 0;
+    .our-services-parts-list-items {
+      margin-bottom: 10px;
+      color: #555;
+      font-size: 20px;
+      .our-services-parts-list-icon {
+        color: $mainColorGold;
+        font-size: 20px;
+      }
+    }
+  }
+}
+#engineeringServices {
+  .our-services-parts-image {
+    background-image: url("../images/about-us/bg.png");
+  }
+}
+.example-for-our-works {
+  background-color: $mainColorBlack;
+  padding-bottom: 30px;
+  .example-for-our-works-title {
+    color: #fff;
+    padding: 20px 0;
+    font-size: 22px;
+  }
+  .example-for-our-works-divider {
+    border-top: 1px dotted #fff;
+    margin-bottom: 20px;
+  }
+  .example-for-our-works-video {
+    iframe {
+      border: 5px solid $mainFontColorForBlack;
+    }
+  }
+  .see-all-works-link {
+    text-decoration: none;
+    color: $mainFontColorForBlack;
+    border: 3px solid $mainFontColorForBlack;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    @extend %flex;
+    margin-top: 20px;
+    @include transition(0.3s, all);
+    &:hover {
+      background-color: $mainFontColorForBlack;
+      color: $mainColorBlack;
+    }
+    .see-all-works-btn {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

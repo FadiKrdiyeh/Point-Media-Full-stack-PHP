@@ -1,0 +1,21 @@
+{
+  "name": "point-media-company",
+  "version": "1.0.0",
+  "description": "Point Media Company Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fadi Krdiyeh",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.2",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.0",
+    "hover.css": "^2.3.2",
+    "jquery": "^3.6.0",
+    "vanilla-tilt": "^1.7.2",
+    "waypoints": "^4.0.1",
+    "wowjs": "^1.1.3"
+  }
+}

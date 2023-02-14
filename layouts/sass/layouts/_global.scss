@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Tajawal;
+  src: url("../fonts/ARBFONTS-TAJAWAL-MEDIUM.TTF"),
+    url("../fonts/ARBFONTS-TAJAWAL-BLACK.TTF"),
+    url("../fonts/ARBFONTS-TAJAWAL-BOLD-2.TTF"),
+    url("../fonts/ARBFONTS-TAJAWAL-EXTRABOLD.TTF"),
+    url("../fonts/ARBFONTS-TAJAWAL-EXTRALIGHT.TTF"),
+    url("../fonts/ARBFONTS-TAJAWAL-LIGHT.TTF"),
+    url("../fonts/ARBFONTS-TAJAWAL-REGULAR-2.TTF");
+}
+html,
+body {
+  height: 100%;
+  // width: 100%;
+  // overflow: hidden;
+  width: 100vw;
+  z-index: 1;
+  max-width: 100%;
+  overflow-anchor: none;
+}
+body {
+  font-family: "Tajawal", Arial, sans-serif;
+  // height: 1000px;
+  overflow-y: scroll;
+  // overflow-y: hidden;
+  // overflow-x: hidden;
+  padding-top: 50px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Tajawal", Arial, sans-serif;
+}
+::-webkit-scrollbar {
+  background-color: #636363d0;
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    300deg,
+    rgba(0, 0, 0, 0.567) 40%,
+    rgba($mainColorGold, 0.7) 100%
+  );
+  border-radius: 15px;
+}
+::selection {
+  background-color: rgba($mainColorGold, 0.7);
+}
+.mt-10 {
+  margin-top: 5.5rem;
+}
+.mb-10 {
+  margin-bottom: 5.5rem;
+}
+.wow {
+  visibility: hidden;
+}
+// section {
+//   width: 100vw;
+//   // height: 100vh !important;
+//   z-index: 1;
+//   max-width: 100%;
+// }

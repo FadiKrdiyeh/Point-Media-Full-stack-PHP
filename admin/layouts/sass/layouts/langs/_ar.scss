@@ -1,0 +1,62 @@
+body.arabic {
+  // background-color: black;
+  /***** Start Header *****/
+  header {
+    .navbar {
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            &.dropdown {
+              .dropdown-menu {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /***** End Header *****/
+
+  /***** Start Why Choose Us *****/
+  // .why-choose-us {
+  //   #chooseUsList {
+  //     li {
+  //       figure {
+  //         .our-client-icon-container {
+  //           left: 85px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  .why-choose-us {
+    #chooseUsList {
+      li {
+        float: left;
+        figure {
+          .our-client-icon-container {
+            left: 85px;
+          }
+        }
+      }
+    }
+  }
+
+  /***** Start Why Choose Us *****/
+
+  /***** Start Footer *****/
+  .footer {
+    .main-footer {
+      .content {
+        .footer-icons {
+          margin-left: 10px;
+          right: 0;
+        }
+      }
+    }
+  }
+  /***** End Footer *****/
+}

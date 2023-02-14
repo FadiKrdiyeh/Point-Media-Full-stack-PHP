@@ -1,0 +1,137 @@
+.manage {
+  padding: 50px 0;
+  // margin-bottom: 150px;
+  .total_results {
+    background-color: transparent;
+    // color: #eee;
+    display: none;
+    font-size: 27px;
+    text-shadow: 0 0 10px #eee;
+    border-bottom: none;
+    #total_results {
+      text-shadow: none;
+      font-weight: bold;
+    }
+  }
+  .our-works-title {
+    color: #111;
+    font-size: 2.4em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .our-works-item {
+    position: relative;
+    width: auto;
+    // min-height: 400px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+    .card {
+      width: 100% !important;
+      // height: 100% !important;
+      // background-color: #111;
+      // // border-color: #444;
+      // img {
+      // }
+      .card-body {
+        // background-color: #111;
+        .card-title {
+          // color: rgba(238, 238, 238, 0.85);
+          font-weight: bold;
+          font-size: 23px;
+          letter-spacing: 1.2px;
+        }
+        .text-muted {
+          letter-spacing: 1.9px;
+        }
+        .our-works-content {
+          position: relative;
+          .flip-card {
+            position: relative;
+            transform-style: preserve-3d;
+            .face {
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transform-style: preserve-3d;
+              justify-content: center;
+              align-items: center;
+              backface-visibility: hidden;
+              transform: perspective(500px) rotateY(0deg);
+              // @include transition(2s);
+              transition: all 2s;
+            }
+            .face {
+              &.front {
+                transform: perspective(500px) rotateY(180deg);
+                &.active {
+                  transform: perspective(500px) rotateY(0deg);
+                }
+                // position: absolute;
+              }
+              &.back {
+                transform: perspective(500px) rotateY(180deg);
+                direction: ltr;
+                &.active {
+                  transform: perspective(500px) rotateY(360deg);
+                }
+              }
+            }
+          }
+          .works-title {
+            font-size: 20px;
+            color: #222;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .works-date-comments {
+            color: #adadad;
+            line-height: 1.3em;
+            font-weight: 400;
+            font-size: 12px;
+            margin-bottom: 15px;
+            // .works-date {
+            // }
+            // .works-comments {
+            // }
+          }
+          .works-content {
+            line-height: 1.5em;
+            font-size: 14px;
+            color: #777;
+          }
+          .works-read-more-btn {
+            margin-top: 20px;
+            a {
+              color: $mainFontColorForBlack;
+              text-decoration: none;
+              i {
+                font-size: 10px;
+                @include transition(0.3s, all);
+              }
+              &:hover {
+                i {
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      // .card-footer {
+      // }
+    }
+    // .our-works-image {
+    //   width: 100%;
+    //   height: 100%;
+    //   background-size: auto auto;
+    //   background-repeat: no-repeat;
+    // }
+  }
+  .error-validation-messages {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,76 @@
+/***** Start Header Part *****/
+header {
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          @media (min-width: 992px) and (max-width: 1199px) {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}
+/***** End Header Part *****/
+
+/***** Start Our Services Pages *****/
+.our-services-parts {
+  .our-services-parts-title-area {
+    .our-services-parts-main-title {
+      @media (max-width: 991px) {
+        font-size: 35px;
+      }
+    }
+    .our-services-parts-main-description {
+      @media (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+/***** End Our Services Pages *****/
+
+// @media (max-width: 575px) {
+//   // Extra Small Screen Only
+// }
+
+// /////////////////////////////////
+// @media (min-width: 576px) and (max-width: 767px) {
+//   // Small Screen Only
+// }
+// @media (min-width: 576px) {
+//   // Small Screen And Above
+// }
+
+// /////////////////////////////////
+
+// @media (min-width: 768px) and (max-width: 991px) {
+//   // Medium Screen Only
+// }
+// @media (min-width: 768px) {
+//   // Medium Screen And Above
+// }
+
+// /////////////////////////////////
+
+// @media (min-width: 992px) and (max-width: 1199px) {
+//   // Large Screen Only
+// }
+// @media (min-width: 992px) {
+//   // Large Screen And Above
+// }
+
+// /////////////////////////////////
+
+// @media (min-width: 1200px) and (max-width: 1399px) {
+//   // Extra Large Screen Only
+// }
+// @media (min-width: 1200px) {
+//   // Extra Large Screen And Above
+// }
+
+// /////////////////////////////////
+// @media (min-width: 1400px) {
+//   // xxl Screen And Above
+// }
